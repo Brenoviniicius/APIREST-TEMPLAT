@@ -1,4 +1,2 @@
-package REST.API.demo.interfaces;
-
-public interface CreateUser {
+package REST.API.demo.interfaces;public interface CreateUser {
 }

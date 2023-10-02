@@ -1,4 +1,2 @@
-package REST.API.demo.interfaces;
-
-public class UpdateUser {
+package REST.API.demo.interfaces;public interface UpdateUser {
 }
