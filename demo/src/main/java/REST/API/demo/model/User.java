@@ -10,6 +10,7 @@ import jakarta.validation.constraints.Size;
 import lombok.*;
 
 import java.util.ArrayList;
+import java.util.List;
 
 @Data
 @Entity
@@ -31,6 +32,7 @@ public class User {
     @Size (min = 2, max = 15, groups = {CreateUser.class, UpdateUser.class})
     private String password;
 
-    //private List<Task> tasks = new ArrayList<Task>()
+    @OneToMany (mappedBy = "user")
+    private List<Task> tasks = new ArrayList<Task>();
 
 }
