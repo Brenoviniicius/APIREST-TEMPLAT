@@ -1,4 +1,4 @@
-package REST.API.demo.model;
+package REST.API.demo.models;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;

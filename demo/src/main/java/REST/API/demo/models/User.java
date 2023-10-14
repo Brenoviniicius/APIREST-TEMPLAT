@@ -1,8 +1,8 @@
-package REST.API.demo.model;
+package REST.API.demo.models;
 
-import REST.API.demo.interfaces.CreateUser;
+import REST.API.demo.models.DTO.CreateUser;
 
-import REST.API.demo.interfaces.UpdateUser;
+import REST.API.demo.models.DTO.UpdateUser;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
