@@ -25,4 +25,28 @@ public class Task {
     @NotBlank
     @Size (min = 1, max = 256)
     private long description;
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public long getDescription() {
+        return description;
+    }
+
+    public void setDescription(long description) {
+        this.description = description;
+    }
 }
