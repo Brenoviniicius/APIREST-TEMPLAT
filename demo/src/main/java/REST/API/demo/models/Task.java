@@ -15,7 +15,7 @@ public class Task {
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
     @Column (name = "id", unique= true)
-    private long id;
+    private Long id;
 
     @ManyToOne
     @JoinColumn(name = "user_id", nullable = false, updatable = false)
@@ -48,5 +48,9 @@ public class Task {
 
     public void setDescription(long description) {
         this.description = description;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 }

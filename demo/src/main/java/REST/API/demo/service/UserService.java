@@ -1,9 +1,7 @@
 package REST.API.demo.service;
 
 import REST.API.demo.models.User;
-import REST.API.demo.models.repositories.TaskRepository;
 import REST.API.demo.models.repositories.UserRepository;
-import jakarta.persistence.Id;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,15 +9,9 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Optional;
 
-import static org.springframework.data.jpa.domain.AbstractPersistable_.ID;
-import static org.springframework.data.jpa.domain.AbstractPersistable_.id;
-
 @Setter
 @Getter
 public class UserService {
-
-    @Autowired
-    private TaskRepository taskRepository;
 
     @Autowired
     private UserRepository userRepository;
@@ -35,7 +27,6 @@ public class UserService {
     public User create(User obj) {
         obj.setId(null);
         obj = this.userRepository.save(obj);
-        this.taskRepository.saveAll(obj.getTasks());
         return obj;
     }
 
